@@ -332,15 +332,45 @@ body {
 }
 
 /* ---------- Experience & Certifications ---------- */
+.current-certification {
+  max-width: 720px;
+  margin: 1rem auto 1.5rem;
+  padding: 1.1rem 1.4rem;
+  text-align: left;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.16), rgba(14, 165, 233, 0.14));
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  border-left: 4px solid #fbbf24;
+  border-radius: 12px;
+}
+
+.current-certification-label {
+  color: #fbbf24;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.current-certification h3 {
+  color: #fef3c7;
+  font-size: 1.25rem;
+  margin: 0.2rem 0 0.25rem;
+}
+
+.current-certification p {
+  color: #dbeafe;
+  font-size: 0.92rem;
+}
+
 .experience-list,
-.certifications-grid {
+.certification-groups {
   display: grid;
   gap: 1.2rem;
   margin-top: 1rem;
 }
 
 .experience-item,
-.certification-card {
+.certification-group {
   text-align: left;
   padding: 1.4rem 1.5rem;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.82), rgba(30, 41, 59, 0.82));
@@ -350,13 +380,13 @@ body {
 }
 
 .experience-item h3,
-.certification-card h3 {
+.certification-group h3 {
   color: #f8fafc;
   margin-bottom: 0.35rem;
 }
 
 .experience-company,
-.certification-card p {
+.certification-group > p:not(.certification-issuer) {
   color: #dbeafe;
   font-weight: 600;
 }
@@ -373,33 +403,116 @@ body {
   font-size: 0.92rem;
 }
 
-.certifications-grid {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.certification-groups {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.certification-card {
+.certification-group {
   border-top: 3px solid #38bdf8;
 }
 
-.certification-card h3 {
+.featured-certification {
+  grid-column: 1 / -1;
+}
+
+.certification-group h3 {
   font-size: 1.15rem;
 }
 
-.certification-card:nth-child(3n + 1) h3 {
+.certification-lead {
+  margin: 1rem 0 0.75rem;
+  padding: 0.9rem 1rem;
+  background: rgba(14, 165, 233, 0.1);
+  border-left: 3px solid #fbbf24;
+  border-radius: 0 10px 10px 0;
+}
+
+.certification-lead h4 {
+  color: #fbbf24;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.certification-lead p {
+  color: #cbd5e1;
+  font-size: 0.86rem;
+}
+
+.certification-issuer {
+  color: #7dd3fc;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.featured-certification h3 {
   color: #7dd3fc;
 }
 
-.certification-card:nth-child(3n + 2) h3 {
+.certification-group:nth-child(2) h3 {
   color: #c4b5fd;
 }
 
-.certification-card:nth-child(3n) h3 {
+.certification-group:nth-child(3) h3 {
   color: #a7f3d0;
 }
 
-.certification-card span {
+.certification-group details {
+  margin-top: 0.75rem;
+}
+
+.certification-group summary {
+  color: #c4b5fd;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.certification-group details span {
   display: block;
-  margin-top: 0.35rem;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+  margin-top: 0.3rem;
+}
+
+.certification-list {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  margin-top: 1.2rem;
+  padding: 1rem 0 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.certification-list li {
+  color: #f8fafc;
+  display: grid;
+  gap: 0.15rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid rgba(196, 181, 253, 0.55);
+}
+
+.certification-list strong {
+  color: #f0abfc;
+  font-size: 0.96rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.certification-list li > span {
+  color: #cbd5e1;
+  font-size: 0.86rem;
+}
+
+.certification-list details {
+  margin-top: 0.1rem;
+}
+
+.certification-list summary {
+  font-size: 0.8rem;
 }
 
 /* ---------- Contact & Social ---------- */
