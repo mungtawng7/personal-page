@@ -331,6 +331,77 @@ body {
   color: #dbeafe;
 }
 
+/* ---------- Experience & Certifications ---------- */
+.experience-list,
+.certifications-grid {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.experience-item,
+.certification-card {
+  text-align: left;
+  padding: 1.4rem 1.5rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.82), rgba(30, 41, 59, 0.82));
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.18);
+}
+
+.experience-item h3,
+.certification-card h3 {
+  color: #f8fafc;
+  margin-bottom: 0.35rem;
+}
+
+.experience-company,
+.certification-card p {
+  color: #dbeafe;
+  font-weight: 600;
+}
+
+.experience-meta,
+.certification-card span {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+}
+
+.experience-skill {
+  color: #a7f3d0;
+  margin-top: 0.65rem;
+  font-size: 0.92rem;
+}
+
+.certifications-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.certification-card {
+  border-top: 3px solid #38bdf8;
+}
+
+.certification-card h3 {
+  font-size: 1.15rem;
+}
+
+.certification-card:nth-child(3n + 1) h3 {
+  color: #7dd3fc;
+}
+
+.certification-card:nth-child(3n + 2) h3 {
+  color: #c4b5fd;
+}
+
+.certification-card:nth-child(3n) h3 {
+  color: #a7f3d0;
+}
+
+.certification-card span {
+  display: block;
+  margin-top: 0.35rem;
+}
+
 /* ---------- Contact & Social ---------- */
 #contact a {
   color: #c4b5fd;
